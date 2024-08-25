@@ -1,0 +1,15 @@
+{
+  "name": "database-and-server",
+  "version": "1.0.0",
+  "description": "database and server for ashphalt legends unite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Hebenstreit",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "pg": "^8.12.0"
+  }
+}
