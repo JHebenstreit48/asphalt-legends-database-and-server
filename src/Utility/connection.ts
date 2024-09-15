@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 import pg from 'pg';
@@ -21,5 +22,9 @@ const connectToDb = async () => {
     process.exit(1);
   }
 };
+
+// const client = await pool.connect()
+// await client.query('INSERT into Vehicle')
+// client.release()
 
 export { pool, connectToDb };
