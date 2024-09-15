@@ -19,7 +19,7 @@ var Vehicle = /** @class */ (function () {
         this.handling = 0;
         this.nitro = 0;
         this.nitroTS = 0;
-        this.unkwon = 0;
+        this.unknown = 0;
         this.perfectNitroTS = 0;
         this.added = "";
         this.addedWith = "";
@@ -72,7 +72,7 @@ rows.map(function (row, index) {
         tmpVehicle.handling = customParseInt(parsedRow[13]);
         tmpVehicle.nitro = customParseInt(parsedRow[14]);
         tmpVehicle.nitroTS = customParseInt(parsedRow[15]);
-        tmpVehicle.unkwon = customParseInt(parsedRow[16]);
+        tmpVehicle.unknown = customParseInt(parsedRow[16]);
         tmpVehicle.perfectNitroTS = customParseInt(parsedRow[17]);
         tmpVehicle.added = parsedRow[18];
         tmpVehicle.addedWith = parsedRow[19];

@@ -17,7 +17,7 @@ class Vehicle {
   handling: number = 0;
   nitro: number = 0;
   nitroTS: number = 0;
-  unkwon: number = 0;
+  unknown: number = 0;
   perfectNitroTS: number = 0;
   added: string = "";
   addedWith: string = "";
@@ -77,7 +77,7 @@ rows.map((row, index) => {
     tmpVehicle.handling = customParseInt(parsedRow[13]);
     tmpVehicle.nitro = customParseInt(parsedRow[14]);
     tmpVehicle.nitroTS = customParseInt(parsedRow[15]);
-    tmpVehicle.unkwon = customParseInt(parsedRow[16]);
+    tmpVehicle.unknown = customParseInt(parsedRow[16]);
     tmpVehicle.perfectNitroTS = customParseInt(parsedRow[17]);
     tmpVehicle.added = parsedRow[18];
     tmpVehicle.addedWith = parsedRow[19];
