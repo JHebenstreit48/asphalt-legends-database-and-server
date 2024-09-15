@@ -1,8 +1,31 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var fs = require("fs");
-var Vehicle = /** @class */ (function () {
-    function Vehicle() {
+const fs = __importStar(require("fs"));
+class Vehicle {
+    constructor() {
         this.id = 0;
         this.carClass = "";
         this.order = 0;
@@ -38,11 +61,10 @@ var Vehicle = /** @class */ (function () {
         this.unknown2 = 0;
         this.costEpic = 0;
     }
-    return Vehicle;
-}());
-var output = fs.readFileSync("../Resources/asphalt-legends-unite-database-cars.csv");
-var rows = output.toString().split("\n");
-var vehicles = [];
+}
+let output = fs.readFileSync("../Resources/asphalt-legends-unite-database-cars.csv");
+let rows = output.toString().split("\n");
+let vehicles = [];
 function customParseInt(value) {
     if (value.length === 0) {
         return 0;
@@ -52,10 +74,10 @@ function customParseInt(value) {
     }
     return parseInt(value);
 }
-rows.map(function (row, index) {
+rows.map((row, index) => {
     if (index !== 0) {
-        var parsedRow = row.split(",");
-        var tmpVehicle = new Vehicle();
+        let parsedRow = row.split(",");
+        let tmpVehicle = new Vehicle();
         tmpVehicle.id = customParseInt(parsedRow[0]);
         tmpVehicle.carClass = parsedRow[1];
         tmpVehicle.order = customParseInt(parsedRow[2]);
@@ -93,6 +115,6 @@ rows.map(function (row, index) {
         vehicles.push(tmpVehicle);
     }
 });
-vehicles.map(function (vehicle) {
+vehicles.map((vehicle) => {
     console.log(vehicle);
 });
